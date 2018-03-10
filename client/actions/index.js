@@ -64,8 +64,12 @@ export const RESIZE_WINDOW = 'RESIZE_WINDOW';
 // Logging - track data, doesn't impact rendering
 export const LOG_BOUNDS = 'LOG_BOUNDS';
 
+export const INCLINE = 'INCLINE';
+export const CURBRAMP = 'CURBRAMP';
+
 
 // Action creators
+
 export function toggleTripPlanning(planningTrip) {
   return (dispatch, getState) => {
     const {waypoints} = getState();

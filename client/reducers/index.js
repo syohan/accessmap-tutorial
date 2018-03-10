@@ -10,6 +10,7 @@ import routingprofile from './routing-profile';
 import tripplanning from './tripplanning';
 import view from './view';
 import waypoints from './waypoints';
+import tutorial from './tutorial';
 
 /**
  * Routing to be implemented
@@ -25,4 +26,5 @@ export default combineReducers({
   tripplanning,
   view,
   waypoints,
+  tutorial
 });

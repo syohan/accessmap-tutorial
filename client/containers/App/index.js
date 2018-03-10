@@ -13,6 +13,7 @@ import Toolbar from 'react-md/lib/Toolbars';
 import AccessMap from 'containers/AccessMap';
 import FloatingButtons from 'containers/FloatingButtons';
 import OmniCard from 'containers/OmniCard';
+import TutorialCard from 'containers/TutorialCard';
 
 import AccessMapBrand from 'components/AccessMapBrand';
 import ContextMenu from 'components/ContextMenu';
@@ -36,6 +37,10 @@ class App extends Component {
     window.removeEventListener('resize', this.props.actions.resizeWindow);
   }
 
+  createTutorialItems(){
+
+  }
+
   render() {
     const {
       actions,
@@ -49,6 +54,8 @@ class App extends Component {
     const tablet = mediaType == 'TABLET';
     const desktop = mediaType == 'DESKTOP';
 
+    
+
     return (
       <React.Fragment>
         <Toolbar
@@ -59,13 +66,14 @@ class App extends Component {
               key='accessmap-brand'
             >
               <AccessMapBrand
-                secondary='#448aff'
+                secondary='#ff0000'
                 height={mobile ? 32 : 24}
                 primary='#0d47a1'
                 backgroundTransparent
                 mini={mobile}
                 className='accessmap-toolbar-icon'
               />
+	
             </div>
           }
           themed
@@ -107,8 +115,12 @@ class App extends Component {
             />
           }
           <OmniCard />
+	  <TutorialCard />
           <FloatingButtons />
         </div>
+
+
+
       </React.Fragment>
     );
   }
